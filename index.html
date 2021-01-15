@@ -4,11 +4,12 @@
  * @Author: 菅圣楠
  * @Date: 2021-01-15 13:55:18
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-01-15 19:28:20
+ * @LastEditTime: 2021-01-15 19:36:28
 -->
 
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,16 +19,26 @@
             margin: 0;
             padding: 0;
         }
-        
+
         body {
             perspective: 800px;
+        }
+
+        div {
+            margin: 0 auto;
+            text-align: center;
+            font-size: 21px;
+        }
+
+        p {
+            text-align: center;
         }
         
         section {
             position: relative;
             width: 300px;
             height: 200px;
-            margin: 150px auto;
+            margin: 300px auto;
             transform-style: preserve-3d;
             /* perspective: 500px; */
             animation: rotate 10s linear infinite;
@@ -41,12 +52,13 @@
             0% {
                 transform: rotateY(0);
             }
+
             100% {
                 transform: rotateY(360deg);
             }
         }
-        
-        div {
+
+        section div {
             position: absolute;
             left: 0;
             top: 0;
@@ -54,15 +66,17 @@
             height: 100%;
             /* background: url(images/miao.jpg) no-repeat; */
         }
+
         div img {
             width: 200px;
         }
+
         section div:first-child {
             transform: translateZ(300px);
         }
-        
+
         section div:nth-child(2) {
-            
+
             transform: rotateY(60deg) translateZ(300px);
         }
 
@@ -81,11 +95,14 @@
         section div:nth-child(6) {
             transform: rotateY(300deg) translateZ(300px);
         }
-        
     </style>
 </head>
+
 <body>
-    不用怀疑，我就是对表情包有什么误解。
+    <div>
+        <p>不用怀疑，我就是对表情包有什么误解.</p>
+        <img src="5.jpg" alt="">
+    </div>
     <section>
         <div><img src="3.png" alt=""></div>
         <div><img src="3.png" alt=""></div>
@@ -95,6 +112,7 @@
         <div><img src="3.png" alt=""></div>
         <div><img src="4.png" alt=""></div>
     </section>
-    
+
 </body>
+
 </html>
